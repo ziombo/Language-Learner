@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Teams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Team>
+    <Id>44</Id>
+    <Name>Arizona Rednecks</Name>
+    <Conference>NFC West</Conference>
+  </Team>
+  <Team>
+    <Id>666</Id>
+    <Name>Atlanta Pindy</Name>
+    <Conference>NFC South</Conference>
+  </Team>
+</Teams>

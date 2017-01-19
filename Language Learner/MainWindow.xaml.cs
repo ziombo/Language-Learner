@@ -23,6 +23,16 @@ namespace Language_Learner
 		public MainWindow()
 		{
 			InitializeComponent();
+			string appPath = System.IO.Path.GetFullPath(@"..\..\");
+			LanguageData.Source = new Uri(appPath + @"Main.xml");
+
+			
+		}
+
+		private void btnSave_Click(object sender, RoutedEventArgs e)
+		{
+			string source = LanguageData.Source.LocalPath;
+			LanguageData.Document.Save(source);
 		}
 	}
 }

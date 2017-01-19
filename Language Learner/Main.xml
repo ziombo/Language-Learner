@@ -1,13 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Language id="french">
-	<Session id="1">
-		<Word>
-			<Original>le chien</Original>
-			<Translated>pies</Translated>
-		</Word>
-		<Word>
-			<Original>la boisson</Original>
-			<Translated>napój</Translated>
-		</Word>
-	</Session>
+  <Session id="1">
+    <Word>
+      <Original>le poisson</Original>
+      <Translated>ryba</Translated>
+    </Word>
+    <Word>
+      <Original>le chien</Original>
+      <Translated>pies</Translated>
+    </Word>
+  </Session>
+  <Session id="2">
+    <Word>
+      <Original>le garcon</Original>
+      <Translated>chlopiec</Translated>
+    </Word>
+    <Word>
+      <Original>la fille</Original>
+      <Translated>dziewczynka</Translated>
+    </Word>
+  </Session>
 </Language>

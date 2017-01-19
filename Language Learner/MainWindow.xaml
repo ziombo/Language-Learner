@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Language_Learner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="476.5">
+	<Window.Resources>
+		<DataTemplate x:Key="wordItemTemplate">
+			<Label Content="{Binding XPath=Original}"/>
+		</DataTemplate>
+	</Window.Resources>
+	<Grid Margin="0,0,2,0">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="0*"/>
+			<ColumnDefinition Width="0*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.DataContext>
+			<XmlDataProvider x:Name="LanguageData" Source="Main.xml" XPath="Language/Session/Word" />
+		</Grid.DataContext>
+
+		<StackPanel Margin="241,10,10,162">
+			<StackPanel Orientation="Horizontal">
+				<Label>Session ID:</Label>
+				<TextBox Text="{Binding XPath=../@id}" Width="34" />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<Label Width="66">Original:</Label>
+				<TextBox Text="{Binding XPath=Original}" Width="127" RenderTransformOrigin="0.874,0.596" />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<Label>Translated:</Label>
+				<TextBox Text="{Binding XPath=Translated}" Width="109" />
+			</StackPanel>
+			<StackPanel>
+				<Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Click="btnSave_Click"/>
+			</StackPanel>
+		</StackPanel>
+
+		<ListBox x:Name="listBox" HorizontalAlignment="Left" Height="272" Margin="10,0,0,0"
+				 VerticalAlignment="Top" Width="226"
+				 ItemsSource="{Binding}"
+				 ItemTemplate="{StaticResource wordItemTemplate}"
+				 IsSynchronizedWithCurrentItem="True"
+				 Visibility="Visible" SelectionMode="Single">
+		</ListBox>
+	</Grid>
 </Window>
