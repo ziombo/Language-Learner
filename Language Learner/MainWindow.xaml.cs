@@ -22,17 +22,14 @@ namespace Language_Learner
 	{
 		public MainWindow()
 		{
-			InitializeComponent();
-			string appPath = System.IO.Path.GetFullPath(@"..\..\");
-			LanguageData.Source = new Uri(appPath + @"Main.xml");
-
-			
+			InitializeComponent();		
 		}
 
 		private void btnSave_Click(object sender, RoutedEventArgs e)
 		{
-			string source = LanguageData.Source.LocalPath;
-			LanguageData.Document.Save(source);
+			//string source = SessionData.Source.LocalPath;
+			//SessionData.Document.Save(source);
 		}
+
 	}
 }
